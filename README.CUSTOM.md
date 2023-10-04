@@ -26,6 +26,7 @@ Add the following to `tailwind.config.js`
 ```js
 /** @type {import('tailwindcss').Config} */
 export default {
+	prefix: 'tw-', // Avoid conflicts with Shopify's CSS. Make it whatever you want.
 	content: [
 		"./**/*.{js,json,liquid}", // updated to include theme files 
 	],
@@ -83,6 +84,23 @@ In this example the lock file is pnpm's `pnpm-lock.yaml` but you can use `yarn.l
 ```bash
 package.json
 pnpm-lock.yaml
+```
+## Usage
+
+In order to use Tailwind CSS in your theme you need to import the `styles.css` file in your `theme.liquid` file directly below `{{ 'base.css' | asset_url | stylesheet_tag }}`.
+
+```liquid
+{{ 'styles.css' | asset_url | stylesheet_tag }}
+```
+
+### Development
+Run the Shopify theme watcher in one terminal
+```bash
+pnpm run dev
+```
+In another terminal run the Vite server to watch for changes so that it can update the `assets/styles.css` file in real time.
+```bash
+pnpm run watch
 ```
 
 

@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "shopify theme dev -s cold-solid-water.myshopify.com",
     "build": "vite build --minify",
-    "watch": "vite build --watch"
+    "watch": "vite build --watch",
+    "twdev": "shopify theme dev -s cold-solid-water.myshopify.com && vite build --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
