@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "scripts": {
-    "dev": "shopify theme dev -s yourstore.myshopify.com",
+    "dev": "shopify theme dev -s cold-solid-water.myshopify.com",
     "build": "vite build --minify",
     "watch": "vite build --watch"
   },
