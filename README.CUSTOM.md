@@ -14,13 +14,14 @@ Add config files
 ```bash
 touch vite.config.js postcss.config.js tailwind.config.js tailwind.css
 ```
-
+---
 Add the following to `tailwind.css`
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
+---
 Add the following to `tailwind.config.js`
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -34,7 +35,7 @@ export default {
 	plugins: [],
 }
 ```
-
+---
 Add the following to `postcss.config.js`
 ```js
 module.exports = {
@@ -44,7 +45,7 @@ module.exports = {
   }
 }
 ```
-
+---
 Add the following to `vite.config.js`
 ```js
 import { defineConfig } from 'vite';
@@ -64,5 +65,14 @@ export default defineConfig({
   },
 });
 ```
+---
+Add scripts to `package.json`.
 
-
+Make sure to replace `yourstore.myshopify.com` with your store's url
+```json
+"scripts": {
+	"dev": "shopify theme dev -s yourstore.myshopify.com",
+	"build": "vite build --minify",
+	"watch": "vite build --watch"
+}
+```
